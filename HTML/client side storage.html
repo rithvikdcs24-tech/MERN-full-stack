@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+
+    <h1>Local Storage Demo</h1>
+
+    <button onclick="remove();">
+        Remove Item from local storage
+    </button>
+
+    <div id="output"></div>
+
+    <script>
+
+        if (typeof(Storage) != "undefined") {
+
+            localStorage.setItem("name", "Chandana");
+            localStorage.setItem("company", "Bangalore");
+
+            document.write("Hi" + " Name: " + localStorage.name +
+                           " Company:" + localStorage.company);
+
+        }
+        else {
+
+            alert("Sorry ! your browser not supporting the web storage");
+
+        }
+
+        function remove() {
+
+            localStorage.removeItem("name");
+
+            document.getElementById("output").innerHTML =
+                "Hi , my name is " + " " + localStorage.name;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

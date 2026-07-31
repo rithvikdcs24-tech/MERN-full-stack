@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+
+    <h1>GeoLocation API</h1>
+
+    <h1>Find your Current Location</h1>
+
+    <div id="location"></div>
+
+    <button onclick="getlocation()">
+        Click Me to find the location
+    </button>
+
+    <script>
+
+        var x = document.getElementById("location");
+
+        function getlocation() {
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }
+            else {
+                alert("Sorry! it is not supported");
+            }
+        }
+
+        function showPosition(position) {
+
+            var x = position.coords.latitude;
+            var y = position.coords.longitude;
+
+            document.getElementById("location").innerHTML = x;
+            document.getElementById("location").innerHTML = y;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

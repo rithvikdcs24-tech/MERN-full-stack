@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+
+    <h1>Registration Form</h1>
+
+    <form>
+
+        <label for="username">UserName:</label>
+        <input type="text" name="user" size="20" maxlength="10" /><br /><br />
+
+        <label for="password">Password:</label>
+        <input type="password" name="pwd" maxlength="6" size="20" /><br /><br />
+
+        <lable for="address">Address:</lable>
+        <textarea rows="5" cols="30" name="address">
+            Type address
+        </textarea><br />
+
+        <label for="checkbox">Select Your Languages</label><br />
+
+        <input type="checkbox" name="English" value="on" checked="checked" />English<br />
+        <input type="checkbox" name="Hindi" value="on" />Hindi<br />
+        <input type="checkbox" name="Kannada" value="on" />Kannada<br />
+        <input type="checkbox" name="Telgu" value="on" />Telgu<br />
+
+        <label for="radio">Select Your Gender:</label>
+
+        <input type="radio" name="gender" value="Male" />Male
+        <input type="radio" name="gender" value="Female" />Female<br />
+
+        <label for="city">Select Your City:</label>
+
+        <select name="city" multiple="multiple">
+            <option value="unknown">Please Select the city</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Pune">Pune</option>
+            <option value="Kolkatta">Kolkatta</option>
+        </select><br />
+        <label for="cv">Upload your Resume:</label>
+        <input type="file" name="cv" accept="image/*" />
+        <input type="reset" value="clear"/>
+        <input type="submit" value="Register Yourself" />
+
+    </form>
+
+</body>
+
+</html>
