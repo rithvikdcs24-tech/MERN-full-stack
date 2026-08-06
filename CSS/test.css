@@ -1,0 +1,9 @@
+div {
+    background-color: green;
+}
+body {
+    background-image: url(dog\ sample.jpg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+}
