@@ -1,0 +1,38 @@
+.num {
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+.alpha {
+    list-style-type: upper-alpha;
+    list-style-position: outside;
+}
+
+.roman {
+    list-style-type: upper-roman;
+}
+
+.lowalpha {
+    list-style-type: kannada;
+}
+
+.lowroman {
+    list-style-type: malayalam;
+}
+
+.disc {
+    list-style-type: disc;
+}
+
+.circle {
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+.square {
+    list-style-type: square;
+}
+
+.random {
+    list-style-type: georgian;
+}
