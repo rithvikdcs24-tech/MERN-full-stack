@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Registration Form</title>
+
+    <style>
+
+        body {
+            background-color: lightblue;
+            font-family: Arial;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        form {
+            width: 500px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+            border: 3px solid darkblue;
+            border-radius: 15px;
+        }
+
+        label {
+            color: darkblue;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 2px solid lightblue;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin: 8px;
+        }
+
+        input[type="file"] {
+            margin-top: 8px;
+            margin-bottom: 20px;
+        }
+
+        input[type="submit"] {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="reset"] {
+            background-color: orange;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: darkgreen;
+        }
+
+        input[type="reset"]:hover {
+            background-color: darkorange;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Registration Form</h1>
+
+    <form>
+
+        <label for="username">UserName:</label>
+        <input type="text"
+               id="username"
+               name="user"
+               size="20"
+               maxlength="10"
+               placeholder="Enter your username">
+
+        <label for="password">Password:</label>
+        <input type="password"
+               id="password"
+               name="pwd"
+               maxlength="6"
+               size="20"
+               placeholder="Enter your password">
+
+        <label for="address">Address:</label>
+        <textarea id="address"
+                  rows="5"
+                  cols="30"
+                  name="address"
+                  placeholder="Type your address"></textarea>
+
+
+        <label>Select Your Languages:</label>
+        <br>
+
+        <input type="checkbox"
+               name="English"
+               value="on"
+               checked>English
+
+        <br>
+
+        <input type="checkbox"
+               name="Hindi"
+               value="on">Hindi
+
+        <br>
+
+        <input type="checkbox"
+               name="Kannada"
+               value="on">Kannada
+
+        <br>
+
+        <input type="checkbox"
+               name="Telugu"
+               value="on">Telugu
+
+        <br><br>
+
+
+        <label>Select Your Gender:</label>
+        <br>
+
+        <input type="radio"
+               name="gender"
+               value="Male">Male
+
+        <input type="radio"
+               name="gender"
+               value="Female">Female
+
+        <br><br>
+
+
+        <label for="city">Select Your City:</label>
+
+        <select id="city" name="city">
+            <option value="unknown">Please Select the city</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Pune">Pune</option>
+            <option value="Kolkata">Kolkata</option>
+        </select>
+
+
+        <label for="cv">Upload your Resume:</label>
+        <br>
+
+        <input type="file"
+               id="cv"
+               name="cv">
+
+        <br>
+
+        <input type="reset" value="Clear">
+
+        <input type="submit" value="Register Yourself">
+
+    </form>
+
+</body>
+
+</html>
