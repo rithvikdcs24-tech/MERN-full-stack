@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title></title>
+        <style>
+            div img{
+                width:200px;
+                height:200px;
+               
+            }
+            #one{
+                width:200px;
+                height:200px;
+                -webkit-mask-image: radial-gradient(circle at 50% 50%, blue 40%,rgba(0,0,0,0.3)70%);
+                border:9px ridge red;
+            }
+            
+            #masked{
+                width:200px;
+                height:200px;
+                -webkit-mask-image: radial-gradient(50% 30% at 50% 50%, blue 40%,rgba(0,0,0,0.3)35%);
+                border:9px ridge red;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <div>
+                <h1>Original image</h1>
+                <img src="cat sample.jpg"/>
+            </div>
+
+            <div>
+                <h1>little changes</h1>
+                <img src="cat sample.jpg" id="one"/>
+            </div>
+            <div>
+                <h1>After masking</h1>
+                <img src="cat sample.jpg" id="masked"/>
+            </div>
+
+        </center>
+    </body>
+</html>
