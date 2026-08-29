@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>String Demo</title>
+</head>
+
+<body>
+
+    <script>
+
+        var str = new String("This is a String    ");
+
+        document.write(str + "<br/>");
+
+        document.write(str.charAt(4));
+
+        document.write(str.length + "<br/>");
+
+        document.write(str.concat("This is Ethnus") + "<br/>");
+
+        //document.write(str.indexOf("is"));
+
+        let s = new String("EthnusEthnus");
+
+        document.write(s.lastIndexOf("s"));
+
+        document.write(s.toLowerCase() + "<br/>");
+        document.write(s.toUpperCase() + "<br/>");
+
+        document.write(s.slice(0,4) + "<br/>");
+
+        let s1 = "        Ethnus        ";
+        let r = s1.trim();
+
+        document.write(r + "<br/>" + r.length);
+
+    </script>
+
+</body>
+
+</html>
