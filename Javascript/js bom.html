@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+
+    <h1>innerText Property</h1>
+
+    <form name="myform">
+
+        Password:
+        <input type="password"
+               value=""
+               name="pwd"
+               onkeyup="validate()" />
+
+        <br><br>
+
+        Strength:
+        <span id="loc">No strength</span>
+
+    </form>
+
+    <script>
+
+        function validate() {
+
+            var msg;
+
+            if (document.myform.pwd.value.length > 5) {
+                msg = "Good";
+            }
+            else {
+                msg = "poor";
+            }
+
+            document.getElementById("loc").innerText = msg;
+        }
+
+    </script>
+
+</body>
+
+</html>
