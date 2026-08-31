@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Array Demo</title>
+</head>
+
+<body>
+
+    <h1>Array Demo</h1>
+
+    <script>
+
+        var arr = ["html", "css", "javascript"];
+
+        var resfill = arr.fill("java", 0, 2);
+
+        document.writeln(resfill + "<br/>");
+
+
+        var a = Array.from("this is simple array");
+
+        document.writeln(a + "<br/>");
+
+
+        var marks = [5, 22, 19, 25, 34];
+
+        function check(value) {
+            return value > 30;
+        }
+
+        document.writeln(marks.filter(check) + "<br/>");
+
+
+        var r = marks.find(x => x > 20);
+
+        document.write("Result is:" + r);
+
+        document.write("<br/><br/>");
+
+
+        var arr1 = [10, 20, 30, 40];
+
+        var arr2 = ['a', 'b', 'c', 'd'];
+
+        var result = arr1.flatMap((arr1, index) => [arr1, arr2[index]]);
+
+        document.writeln(result + "<br/>");
+
+
+        var arr = ["nikhil", "abhinash", "varmani", "pratyush"];
+
+        var fname = ['Apple', 'orange', 'mango', 'grapes'];
+
+        var res = arr.flatMap((arr, index) => [arr, fname[index]]);
+
+        document.writeln(res);
+
+    </script>
+
+</body>
+
+</html>
