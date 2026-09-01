@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+
+    <h1>DOM Demo</h1>
+
+    <ul id="menu">
+        <li class="first">Home</li>
+        <li>Product</li>
+        <li class="current">Customer Support</li>
+        <li>Careers</li>
+        <li>Investors</li>
+        <li>News</li>
+        <li class="last">About Us</li>
+    </ul>
+
+    <script>
+
+        let content = document.getElementById("menu");
+
+        let firstChild = content.firstChild.nodeName;
+
+        document.write(firstChild);
+
+        console.log(content.firstElementChild);
+
+        document.write(content.firstElementChild);
+
+        console.log(content.lastElementChild);
+
+        document.write(content.lastElementChild);
+
+        let children = content.children;
+
+        console.log(children);
+
+        document.write(children);
+
+        document.body.style.backgroundColor = "red";
+
+        setTimeout(() => document.body.style.backgroundColor = '', 3000);
+
+    </script>
+
+</body>
+
+</html>
