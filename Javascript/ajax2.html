@@ -1,58 +1,44 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
-
-    <meta charset="utf-8">
-
-    <title>Scroll Height & Scroll Width</title>
-
-    <style>
-
-        #mydiv {
-            margin-top: 10px;
-            height: 250px;
-            width: 250px;
-            overflow: auto;
-        }
-
-        #content {
-            height: 800px;
-            width: 2000px;
-            padding: 10px;
-            background-color: aquamarine;
-        }
-
-    </style>
-
+    <meta charset="utf-8" />
+    <title></title>
 </head>
 
 <body>
-
-    <h1>Scroll Height & Scroll Width</h1>
-
-    <div id="mydiv">
-
-        <div id="content">
-            The scrollWidth value is equal to the minimum width the element would require in order to fit all the content without a horizontal scrollbar.
-        </div>
-
-    </div>
+    <h1>JSON DEMO</h1>
 
     <p id="demo"></p>
+    <p id="d"></p>
+    <p id="i"></p>
 
     <script>
 
-        let elem = document.getElementById("content");
+        //javascript
+        var obj = { name: "nahida", company: "Ethnus" };
 
-        let x = elem.scrollHeight;
-        let y = elem.scrollWidth;
+        //json
+        const txt = '{ "name": "nikhil", "age": "30", "city": "newyork" }';
+
+        const object = JSON.parse(txt);
 
         document.getElementById("demo").innerHTML =
-            "Height: " + x + "\tWidth: " + y;
+            object.name + ":" + object.age + ":" + object.city;
 
-        document.write(document.documentElement.clientHeight);
+        //json array
+        let jarr = '["abc","xyz","lmn"]';
+
+        let arr = JSON.parse(jarr);
+
+        document.getElementById("d").innerHTML =
+            arr[0] + ":" + arr[1];
+
+        //converting javascript object into json object using stringify
+
+        var myobj = JSON.stringify(obj);
+
+        document.getElementById("i").innerHTML = myobj;
 
     </script>
 
