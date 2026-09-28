@@ -2,29 +2,31 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>Timer</title>
+    <meta charset="utf-8" />
+    <title></title>
 </head>
 
 <body>
 
-    <h1>Timer</h1>
+    <h1>XML HTTP Request Object</h1>
 
-    <p id="d"></p>
+    <p id="demo"></p>
 
     <script>
 
-        setInterval(myTimer, 1000); 
+        var xhttp = new XMLHttpRequest();
 
-        function myTimer() {
+        xhttp.onreadystatechange = function () {
 
-            document.body.style.backgroundColor = "pink";
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("demo").innerHTML =
+                    this.getAllResponseHeaders();
+            }
 
-            const d = new Date();
+        };
 
-            document.getElementById("d").innerHTML = d;
-
-        }
+        xhttp.open("GET", "content.html", true);
+        xhttp.send();
 
     </script>
 
