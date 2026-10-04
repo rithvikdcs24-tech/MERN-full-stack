@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Insert title here</title>
+</head>
+
+<body>
+
+    <h1>Spread Operator ES6(latest version changes)</h1>
+
+    <div class="sample">
+        <div style="color:maroon;" class="result"></div>
+        <button class="btn">Spread Operator</button>
+    </div>
+
+    <h1>Rest Operator</h1>
+
+    <div class="sample">
+        <div style="color:maroon;" class="result"></div>
+        <button class="btn">Spread Operator</button>
+    </div>
+
+
+    <script>
+
+        let b = document.querySelectorAll(".btn");
+        let r = document.querySelectorAll(".result");
+
+        let arr = [2, 3, 4, 5];
+        let arr1 = ["a", "b", "c", "d"];
+
+        r[0].innerHTML = "arr=" + arr + "<br> arr1=" + arr1;
+
+
+        function addArr(num, ...ar) {
+            let sum = num;
+
+            ar.forEach((item) => {
+                sum = sum + item;
+            });
+
+            r[1].innerHTML = "sum of the elements=" + sum;
+        }
+
+
+        b[0].addEventListener("click", () => {
+            r[0].innerHTML = [...arr, ...arr1];
+        });
+
+
+        b[1].addEventListener("click", () => {
+            addArr(1, 2, 3, 4, 5);
+        });
+
+    </script>
+
+</body>
+
+</html>
