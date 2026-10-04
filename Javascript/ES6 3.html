@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+    <h1>Promise</h1>
+    <p id="demo"></p>
+
+    <script>
+
+        function display(some) {
+            document.getElementById("demo").innerHTML = some;
+        }
+
+        function first() {
+            display("hello");
+        }
+
+        function second() {
+            display("hi");
+        }
+
+        function third() {
+            display("welcome");
+        }
+
+        second();
+        third(); //calling the function
+
+    </script>
+
+</body>
+</html>
