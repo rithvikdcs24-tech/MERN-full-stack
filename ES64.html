@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OOPS</title>
+</head>
+
+<body>
+
+    <h1>OOPS</h1>
+
+    <script>
+
+        class Student {
+            constructor(name, id) {
+                this.name = name;
+                this.id = id;
+            }
+
+            set sname(newname) {
+                document.writeln("setter method called<br>");
+                this.name = newname;
+            }
+
+            show() {
+                document.writeln("Student class show method<br>");
+                document.writeln("Name: " + this.name + "<br>");
+                document.writeln("id: " + this.id + "<br>");
+            }
+        }
+
+        var sobj = new Student("pratyush", 101);
+        sobj.show();
+
+        sobj.sname = "Nahida"; // setter method calling
+
+        sobj.show();
+
+
+        var Employee = class {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            show() {
+                document.writeln("Employee class show method<br>");
+                document.writeln("Name: " + this.name + "<br>");
+                document.writeln("Age: " + this.age + "<br>");
+            }
+
+            getName() {
+                document.writeln("getter method<br>");
+                return this.name;
+            }
+        }
+
+        var eobj = new Employee("pratyush", 25);
+        eobj.show();
+
+        document.writeln(eobj.getName());
+
+    </script>
+
+</body>
+</html>
