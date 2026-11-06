@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Array</title>
+</head>
+<body>
+
+    <h1>Dynamic array using prompt</h1>
+
+    <input type="text" id="num" />
+
+    <input type="button" id="addbtn" onclick="addValues();" value="Add array Elements" style="background-color:cyan">
+
+    <input type="button" id="showbtn" onclick="showValues();" value="Show Data" style="background-color:orange">
+
+    <div id="display"></div>
+
+    <script>
+        var inputArr = [];
+
+        function addValues() {
+            var inpt = document.getElementById("num");
+
+            if (inpt.value == "" || inpt.value == "null")
+                alert("Element can't be empty or null..!");
+            else
+                inputArr.push(inpt.value);
+
+            inpt.value = '';
+        }
+
+        function showValues() {
+            var i = '';
+
+            for (var j = 0; j < inputArr.length; j++) {
+                i += '<div>' + inputArr[j] + '</div>';
+            }
+
+            var k = document.getElementById('display');
+            k.innerHTML = i;
+        }
+    </script>
+
+</body>
+</html>
